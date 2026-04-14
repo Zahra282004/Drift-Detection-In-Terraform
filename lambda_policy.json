@@ -1,1 +1,35 @@
-
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "S3Access",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:ListBucket"
+			],
+			"Resource": [
+				"arn:aws:s3:::terraform-main-config-bucket",
+				"arn:aws:s3:::terraform-main-config-bucket/*",
+				"arn:aws:s3:::my-tf-bucket-2004",
+				"arn:aws:s3:::my-tf-bucket-2004/*"
+			]
+		},
+		{
+			"Sid": "SNSAccess",
+			"Effect": "Allow",
+			"Action": "sns:Publish",
+			"Resource": "arn:aws:sns:us-east-1:263015886075:terraform-drift-detection"
+		},
+		{
+			"Sid": "AWSResourceReadOnly",
+			"Effect": "Allow",
+			"Action": [
+				"ec2:Describe*",
+				"s3:GetBucket*",
+				"iam:Get*"
+			],
+			"Resource": "*"
+		}
+	]
+}
