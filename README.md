@@ -43,5 +43,8 @@ In production environments, manual changes made directly via the AWS Console can
 
 * Once deployed, you can trigger the Lambda function manually via the AWS Console/CLI or automate it using an **Amazon EventBridge (CloudWatch Events)** schedule (e.g., run every 12 hours or daily).
 * If drift is detected, you will receive an SNS notification containing details of the changes so your team can reconcile them back into your codebase.
+<img width="495" height="308" alt="image" src="https://github.com/user-attachments/assets/bbd02bec-511d-409c-9c99-2a6eb107af9a" />
+<img width="353" height="62" alt="image" src="https://github.com/user-attachments/assets/5022b71a-829c-4f39-88f4-a692903e6ab4" />
+
 
 
